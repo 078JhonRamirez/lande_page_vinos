@@ -170,12 +170,15 @@ body {
 
 .informacion {
   padding: 1rem;
-  h3 {
+  h5 {
+    font-size: 1.8rem;
+    color: var(--second-color);
     text-align: center;
   }
   p {
+    margin: .9rem;
     text-align: justify;
-    margin: 1rem;
+    font-size: 1.2rem;
   }
 
   div {
