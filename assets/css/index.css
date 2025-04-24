@@ -1,0 +1,282 @@
+:root {
+  --primary-color: #3e0218;
+  --second-color: #790a33ed;
+  --fond-color-white: #FFF;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.aside__info{
+  position: relative;
+  width: 100%;
+  img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .prensentacion{
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    padding: .8rem;
+    width: 600px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--primary-color);
+      opacity: 50%;
+    }
+
+    
+    p{
+      position: relative;
+      font-size: 2rem;
+      text-align: justify;
+      line-height: 1.3em;
+      color: var(--fond-color-white);
+    }
+  }
+}
+
+.header {
+  background-color: var(--primary-color);
+  padding: 0.5rem;
+  color: var(--second-color);
+}
+
+.bgr__img {
+  position: fixed;
+  left: 18%;
+  z-index: -1;
+  width: 70%;
+  height: 100%;
+  opacity: 8%;
+}
+
+.main {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 8px;
+
+  .card__type-vino {
+    position: relative;
+    width: 500px;
+    height: 600px;
+    padding: 0.1rem;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+
+    h2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--second-color);
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+.button__float-rigth {
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+  width: 40px;
+  height: 40px;
+  padding: 0.5rem;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+  background-color: var(--primary-color);
+  cursor: pointer;
+
+  i {
+    font-size: 2.5rem;
+  }
+}
+.catalogo {
+  padding: 1rem;
+
+  h3 {
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.8rem;
+    color: var(--second-color);
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .container__card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    justify-content: space-between;
+    justify-items: center;
+
+    .card {
+      width: 200px;
+      max-height: 300px;
+      text-align: center;
+      border-radius: 15px 15px 0px 0px;
+      overflow: hidden;
+
+      header {
+        width: 200px;
+        height: max-content;
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      footer {
+        background-color: var(--second-color);
+        border-radius: 0px 0px 8px 8px;
+        h4 {
+          font-size: 1rem;
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+}
+
+.informacion {
+  padding: 1rem;
+  h3 {
+    text-align: center;
+  }
+  p {
+    text-align: justify;
+    margin: 1rem;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    img {
+      width: 300px;
+      height: 300px;
+      background-color: #3e0218;
+    }
+  }
+}
+
+.footer {
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: var(--second-color);
+  p{
+    font-size: .8rem;
+    text-align: center;
+    color: var(--fond-color-white);
+  }
+}
+
+@media (width <= 900px) {
+  .main {
+    .card__type-vino {
+      width: 250px;
+      height: 300px;
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .catalogo .container__card {
+    .card {
+      width: 150px;
+
+      header {
+        width: 150px;
+      }
+
+      footer h4 {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .aside__info{
+
+    .prensentacion{
+      top: 12.5%;
+      width: 70%;
+
+      p{
+        font-size: 100%;
+      }
+    }
+  }
+
+}
+
+@media (width <= 400px) {
+
+  .main {
+    .card__type-vino {
+      width: 150px;
+      height: 200px;
+      outline: 2px solid yellow ;
+    }
+  }
+  
+
+  .catalogo .container__card {
+    .card {
+      width: 150px;
+
+      header {
+        width: 150px;
+      }
+
+      footer h4 {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .aside__info{
+
+    .prensentacion{
+      top: 12.5%;
+      width: 70%;
+
+      p{
+        font-size: .7rem;
+      }
+    }
+  }
+
+}
